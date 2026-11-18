@@ -1,16 +1,20 @@
 # Prova 2 de Computação em Nuvem
 
-Gabriel Ribeiro de Oliveira
+Instituição: Anhanguera
+Disciplina: Computação em Nuvem
+Professora: Simone Tatiane Do Canto
+Data: 18/11/2026
+Aluno: Gabriel Ribeiro de Oliveira
 
 RA: a4dcc893a8bccc186920
 
 # Questão 1
 
-Resposta:
+Resposta: A diferença é na responsabilidade e no parametro/nivel de controle que vai exercer diante uma tecnologia.
 
 # Questão 2
 
-Resposta:
+Resposta: uma empresa utiliza servidores proprios e tambem recursos de um provedor de nuvem publica qual o modelo de implantação em nuvem essa empresa utiliza?
 
 # Questão 3
 
@@ -21,15 +25,15 @@ Resposta:
 
  DOCKER
  
- # EVIDENCIA 1
- 
+ Evidência 1 - 
+
 root@controlplane:~$ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                     NAMES
 a55d6706e158   nginx:alpine   "/docker-entrypoint.…"   3 seconds ago   Up 3 seconds   0.0.0.0:8090->80/tcp, [::]:8090->80/tcp   comunicado-web
 
-# EVIDENCIA 2
+Evidência 2
 
- root@controlplane:~$ curl http://localhost:8090
+root@controlplane:~$ curl http://localhost:8090
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,3 +61,22 @@ security features and capabilities please refer to
 <p><em>Thank you for using nginx.</em></p>
 </body>
 </html>
+
+Evidência 3
+
+root@controlplane:~$ kubectl get nodes
+NAME           STATUS   ROLES           AGE   VERSION
+controlplane   Ready    control-plane   13d   v1.37.1
+node01         Ready    <none>          13d   v1.37.1
+
+Evidência 4 
+
+kubectl scale deployment comunicado-web --replicas=3
+deployment.apps/comunicado-web scaled
+
+kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+comunicado-web-57c76f7bc4-259hw   1/1     Running   0          21s
+comunicado-web-57c76f7bc4-nqw42   1/1     Running   0          21s
+comunicado-web-57c76f7bc4-xvqk2   1/1     Running   0          87s
+ 
