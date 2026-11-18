@@ -21,7 +21,7 @@ Resposta: Nuvem híbrida combinação de servidores próprios
 
 # Questão 3
 
-Resposta: 
+Resposta: uma máquina virtual (VM) virtualiza o hardware e roda um sistema operacional completo próprio, enquanto um container virtualiza o nível do sistema operaciona
 
 
 # EVIDENCIAS
@@ -175,8 +175,10 @@ O Deployment gerencia os Pods, garantindo que a aplicação esteja rodando na qu
 
 Ao excluir um Pod, o Deployment criou outro automaticamente para manter a quantidade de réplicas desejada. Isso acontece porque ele monitora e mantém os Pods em execução.
 
-# QUESTÃO 4 = Qual é a finalidade de um service no Kubernetes? resumido
+# QUESTÃO 4 RESPOSTA:
+Service no Kubernetes serve para expor e permitir a comunicação com um conjunto de Pods, fornecendo um endereço IP e DNS estáveis, mesmo que os Pods sejam recriados ou alterem seus IPs.
 
+Resumindo: o Service garante uma forma estável de acessar os Pods e distribui o tráfego entre eles.
 
 ## CONCLUSÃO:
 
